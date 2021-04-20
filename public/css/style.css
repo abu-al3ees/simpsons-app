@@ -1,0 +1,27 @@
+
+body{
+    margin: 0;
+    padding: 0;
+  background-color:#62C8E4;
+  font-family: sans-serif;
+}
+
+nav ul li{
+    display: inline-block;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+
+div{
+    background-color: #16a085;
+}
+
+p{
+    color: #fefb1e;
+}
+
+

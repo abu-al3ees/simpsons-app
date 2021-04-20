@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <%-include('nav.ejs')%>
+    </header>
+    <main>
+    <div>
+        <%det.forEach(element=>{ %>
+
+<p>
+    <%=det.quote%>
+</p>
+<p>
+    <%=det.character%>
+</p>
+<img src="<%=det.image%>" alt="">
+
+<p>
+    <%=det.characterDirection%>
+</p>
+<form action="/details/<%=det.id%>?_method=PUT" method="post">
+<input type="text" name="quote" value="<%=element.quote%>">
+<input type="text" name="character" value=" <%=element.character%>">
+<input type="text" name="image" value="<%=element.image%>">
+<input type="text" name="characterDirection" value=" <%=element.characterDirection%>">
+<input type="submit" value="update ">
+</form>
+
+<form action="/details/<%=det.id%>?_method=DELETE" method="post">
+    <input type="submit" value="delete ">
+</form>
+
+
+<% })%>
+
+</main>
+</body>
+</html>
